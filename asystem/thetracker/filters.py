@@ -1,5 +1,6 @@
 import django_filters
 from .models import Job
+# , Memo
 
 # class JobFilter(django_filters.FilterSet):
 #     CHOICES = (
@@ -61,3 +62,16 @@ class JobFilter(django_filters.FilterSet):
     def filter_by_order(self, queryset, name, value):
         expression = 'created' if value == 'ascending' else '-created'
         return queryset.order_by(expression)
+
+# class MemoFilter(django_filters.FilterSet):
+#     CHOICES = (
+#         ('ascending' , 'Ascending'),
+#         ('descending' , 'Descending')
+#     )
+#     class Meta:
+#         model = Memo
+#         fields = '__all__'
+
+#     def filter_by_order(self, queryset, name, value):
+#         expression = 'created' if value == 'ascending' else '-created'
+#         return queryset.order_by(expression)
