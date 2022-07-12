@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views.generic import ListView, DetailView, CreateView
-from .models import Job
+from .models import Job, Memo
 from .filters import JobFilter
 from django.contrib.auth.mixins import PermissionRequiredMixin
     
@@ -18,9 +18,6 @@ class JobDetailView(DetailView):
     template_name = 'job_details.html'
     fields = '__all__'
 
-    def get_total_amount(self, **kwargs):
-        # total = num_stones * .50 
-        pass
 
 class AddJobView(PermissionRequiredMixin, CreateView):
     permission_required = 'jobs.add_jobs'
@@ -28,3 +25,9 @@ class AddJobView(PermissionRequiredMixin, CreateView):
     template_name = 'add_job.html'
     fields = '__all__'
 
+
+class AddMemoView(PermissionRequiredMixin, CreateView):
+    permission_required = 'jobs.add_jobs'
+    model = Memo
+    template_name = 'add_memo.html'
+    fields = '__all__'

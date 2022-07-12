@@ -32,6 +32,9 @@ class Memo(models.Model):
     date_set = models.DateField(auto_now_add=True)
     job = models.ForeignKey(Job, related_name='memos',on_delete=models.CASCADE)
 
+    def get_absolute_url(self):
+        return reverse('home')
+
    
 
  

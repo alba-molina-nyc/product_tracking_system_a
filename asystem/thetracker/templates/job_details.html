@@ -17,7 +17,7 @@
 
 
 {% if not job.memos.all %}
-No memos yet... <a href="#">Add one</a>
+No memos yet... <a href="{% url 'add-memo' job.pk %}">Add one</a>
 
 {% else %}
 {% for memo in job.memos.all %}
