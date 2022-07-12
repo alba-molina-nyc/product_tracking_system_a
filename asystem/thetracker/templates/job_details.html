@@ -1,0 +1,21 @@
+{% extends 'base.html' %} {% block content %}
+<a href="{% url 'home'%}">Back</a>
+<br>
+
+<small>SKU: {{ job.SKU }}</small>
+<br>
+<small>Order Number: {{ job.order_num }}</small>
+<br>
+<small>Stones: {{ job.num_stones }}</small>
+<br>
+<small>Qty: {{ job.num_items }}</small>
+<br>
+<small>Job Description: {{ job.description_text }}</small>
+<br>
+<small>Job Description: ${{ job.calculate_total_amt }}0 </small>
+<a href="">Create Memo</a>
+
+
+
+
+{% endblock %}
