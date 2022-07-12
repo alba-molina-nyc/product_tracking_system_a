@@ -26,4 +26,12 @@ class Job(models.Model):
         num_stones = self.num_stones * amt
         return num_stones
 
+class Memo(models.Model):
+    name = models.CharField(max_length=275)
+    email = models.EmailField(max_length=275)
+    date_set = models.DateField(auto_now_add=True)
+    job = models.ForeignKey(Job, related_name='memos',on_delete=models.CASCADE)
 
+   
+
+ 

@@ -1,8 +1,7 @@
 from django.contrib import admin
-from .models import Job
-# , Setter
+from .models import Job, Memo
 
 admin.site.register(Job)
-# admin.site.register(Setter)
+admin.site.register(Memo)
 
 # # Register your models here.
