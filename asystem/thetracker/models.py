@@ -33,7 +33,8 @@ class Memo(models.Model):
     job = models.ForeignKey(Job, related_name='memos',on_delete=models.CASCADE)
 
     def get_absolute_url(self):
-        return reverse('home')
+        return reverse('job-detail', args=(str(self.id)))
+
 
    
 
