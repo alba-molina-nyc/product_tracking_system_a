@@ -18,4 +18,26 @@
 {% endif %}
 <hr>
 <a href="{% url 'home'%}">Jobs List</a>
+
+
+<hr />
+
+<h1>---------------------DNT</h1>
+<h1>Filter Memos</h1>
+
+<div class="mx-auto" style="width: 600px;">
+    <form method="GET">
+        <table class="table table-hover">
+            {{ filter.form.as_table }}
+        </table>
+        <button class=" btn btn-primary" type="submit">Submit</button>
+    </form>
+</div>
+
+<ul>
+    {% for memo in memo_filter.qs %}
+</ul>
+
+{% endfor %}
+
 {% endblock %}

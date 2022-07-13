@@ -25,6 +25,7 @@ class Job(models.Model):
         amt = 0.50
         num_stones = self.num_stones * amt
         return num_stones
+   
 
 class Memo(models.Model):
     name = models.CharField(max_length=275)
@@ -34,6 +35,8 @@ class Memo(models.Model):
 
     def get_absolute_url(self):
         return reverse('job-detail', args=(str(self.id)))
+    
+   
 
 
    

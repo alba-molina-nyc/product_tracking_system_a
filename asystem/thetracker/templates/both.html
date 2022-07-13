@@ -1,0 +1,29 @@
+{% extends 'base.html' %} {% block content %}
+<h1>Both</h1>
+
+<h1>Jobs</h1>
+
+{% for job in filter.qs %}
+
+{{ job.id }}
+
+{% endfor %}
+
+
+
+<!-- {% for result in   jempmodeldisplay %}
+
+{{ result.id }}
+
+{% endfor %} -->
+
+
+<h1>Memos</h1>
+
+{% for result in   mempmodeldisplay %}
+
+{{ result.name }}
+
+{% endfor %}
+
+{% endblock %}

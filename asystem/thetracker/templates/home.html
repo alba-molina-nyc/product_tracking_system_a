@@ -69,5 +69,18 @@
 
 <hr />
 
+<h1>---------------------DNT</h1>
+<h1>Filter Memos</h1>
+
+<form method="GET">
+
+    {{ filter.form }}
+</form>
+
+<ul>
+    {% for memo in memo_filter.qs %}
+</ul>
+
+{% endfor %}
 
 {% endblock %}
