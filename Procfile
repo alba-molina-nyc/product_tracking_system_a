@@ -1,1 +1,0 @@
-web: gunicorn take3.wsgi
