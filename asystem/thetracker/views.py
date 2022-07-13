@@ -4,7 +4,9 @@ from .models import Job, Memo
 from .filters import JobFilter
 # , MemoFilter
 from django.contrib.auth.mixins import PermissionRequiredMixin
-    
+
+
+
 class HomeView(ListView):
     model = Job
     filter = JobFilter
