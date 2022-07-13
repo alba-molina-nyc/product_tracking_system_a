@@ -1,1 +1,1 @@
-web: gunicorn asystem.wsgi
+web: gunicorn take3.wsgi
