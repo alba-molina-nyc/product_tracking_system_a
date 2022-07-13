@@ -16,7 +16,14 @@
             <div class="col">
                 <h4>Consigned To:</h4>
                 {% if not job.memos.all %}
-                None at this time, <a href="{% url 'add-memo' job.pk %}">Create Memo</a>
+                None at this time.
+                <p>
+                    <a class="btn btn-primary" data-toggle="collapse" href="{% url 'add-memo' job.pk %}" role="button"
+                        aria-expanded="false" aria-controls="collapseExample" data-toggle="collapse">
+                        Create Memo
+                    </a>
+
+                </p>
                 {% else %}
                 {% for memo in job.memos.all %}
                 {{ memo.name }}
@@ -59,10 +66,18 @@
 
 
 
+    <div class="container">
 
+        {% if not job.memos.all %}
+        <p>
+            No memos yet..
+            <a class="btn btn-primary" data-toggle="collapse" href="{% url 'add-memo' job.pk %}" role="button"
+                aria-expanded="false" aria-controls="collapseExample" data-toggle="collapse">
+                Create Memo
+            </a>
 
-    {% if not job.memos.all %}
-    No memos yet... <a href="{% url 'add-memo' job.pk %}">Create Memo</a>
+        </p>
+    </div>
 
     {% else %}
     {% for memo in job.memos.all %}
