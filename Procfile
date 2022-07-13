@@ -1,3 +1,1 @@
-web:gunicorn asystem.wsgi
-
-
+web: gunicorn asystem.wsgi
