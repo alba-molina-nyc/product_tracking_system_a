@@ -35,7 +35,10 @@
 </div>
 
 <ul>
-    {% for memo in memo_filter.qs %}
+    {% for memo in filter.qs %}
+
+    {{ memo.name }}
+    <td>{{ job.SKU }}</td>
 </ul>
 
 {% endfor %}
