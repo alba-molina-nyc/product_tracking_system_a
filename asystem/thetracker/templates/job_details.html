@@ -64,9 +64,17 @@ No memos yet... <a href="{% url 'add-memo' job.pk %}">Create Memo</a>
 
 {% else %}
 {% for memo in job.memos.all %}
-Total Qty: {{ job.num_items }} <br>
-Total Stones: {{ job.num_stones }}<br>
-Total Amount: ${{ job.calculate_total_amt }}0
+<div class="container">
+    <div class="card">
+        <div class="card-body">
+            <b>Total Qty:</b> {{ job.num_items }} <br>
+            <b>Total Stones:</b> {{ job.num_stones }}<br>
+            <b>Total Amount: </b>${{ job.calculate_total_amt }}0
+
+        </div>
+    </div>
+</div>
+
 {% endfor %}
 
 {% endif %}
